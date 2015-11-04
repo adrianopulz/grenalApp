@@ -1,0 +1,11 @@
+<ion-view view-title="Artigos">
+  <ion-content>
+    <div class="list">
+      <a class="item item-thumbnail-left" ng-repeat="artigo in artigos" href="#/app/artigo/{{artigo.nid}}">
+        <img src="{{artigo.uri}}">
+        <h2>{{artigo.title}}</h2>
+        <p>{{artigo.field_competicao}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
