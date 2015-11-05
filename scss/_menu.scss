@@ -1,0 +1,30 @@
+/**
+ * @file Menu
+ */
+
+.menu-left {
+  .item {
+    padding: 10px 12px;
+  }
+  .item-divider {
+    border: none;
+    padding: 0 12px;
+    a {
+      text-decoration: none;
+      display: block;
+      line-height: 46px;
+    }
+    &.inter {
+      background: $inter_color;
+      a {
+        color: #FFF;
+      }
+    }
+    &.gremio {
+      background: $gremio_color;
+      a {
+        color: #000;
+      }
+    }
+  }
+}

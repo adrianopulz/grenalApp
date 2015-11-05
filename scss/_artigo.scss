@@ -1,0 +1,21 @@
+/**
+ * @file Artigo styles.
+ */
+
+#artigo {
+  h4 {
+    margin-bottom: 30px;
+  }
+}
+
+.gremio {
+  h1, a, .tags {
+    color: $gremio_color;
+  }
+}
+
+.inter {
+  h1, a, .tags {
+    color: $inter_color;
+  }
+}

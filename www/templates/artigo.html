@@ -1,6 +1,17 @@
-<ion-view view-title="{{artigo.title}}">
+<ion-view id="artigo" class="ng-class: class;" view-title="{{title}}">
   <ion-content>
-    <h1>{{artigo.title}}</h1>
-    <div ng-bind-html-unsafe="expression">{{artigo.body}}</div>
+    <div class="card" ng-if="message">
+      <div class="item item-text-wrap assertive">{{message}}</div>
+    </div>
+
+    <img src="{{image}}" alt="" />
+    <div class="row">
+      <div class="col col-100">
+        <h1 ng-bind-html="title"></h1>
+        <h4>{{competicao}}</h4>
+        <div ng-bind-html="body"></div>
+        <div class="tags"><strong>Tags:</strong> {{tags}}</div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

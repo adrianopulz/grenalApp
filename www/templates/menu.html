@@ -13,16 +13,11 @@
   </ion-side-menu-content>
   <ion-side-menu side="left">
     <div class="list">
-      <div class="item item-divider inter">INTER</div>
-      <a class="item" href="#/app/search">Brasileirão</a>
-      <a class="item" href="#/app/search">Copa do Brasil</a>
-      <a class="item" href="#/app/search">Gaúchão</a>
-      <a class="item" href="#/app/search">Libertadores</a>
-      <div class="item item-divider gremio">GRÊMIO</div>
-      <a class="item" href="#/app/search">Brasileirão</a>
-      <a class="item" href="#/app/search">Copa do Brasil</a>
-      <a class="item" href="#/app/search">Gaúchão</a>
-      <a class="item" href="#/app/search">Libertadores</a>
+      <div class="item item-divider inter"><a menu-close href="#/app/artigos/inter/">INTER</a></div>
+      <a menu-close class="item" ng-repeat="item in menu" href="#/app/artigos/inter/{{item.tid}}">{{item.name}}</a>
+
+      <div class="item item-divider gremio"><a menu-close href="#/app/artigos/gremio/">GRÊMIO</a></div>
+      <a menu-close class="item" ng-repeat="item in menu" href="#/app/artigos/gremio/{{item.tid}}">{{item.name}}</a>
     </div>
   </ion-side-menu>
 </ion-side-menus>

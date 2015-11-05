@@ -1,11 +1,15 @@
-<ion-view view-title="Artigos">
+<ion-view class="{{class}} artigos" view-title="{{title}}">
   <ion-content>
-    <div class="list">
-      <a class="item item-thumbnail-left" ng-repeat="artigo in artigos" href="#/app/artigo/{{artigo.nid}}">
-        <img src="{{artigo.uri}}">
-        <h2>{{artigo.title}}</h2>
-        <p>{{artigo.field_competicao}}</p>
-      </a>
+    <div class="card" ng-if="message">
+      <div class="item item-text-wrap assertive">{{message}}</div>
+    </div>
+
+    <div class="list card" ng-repeat="artigo in artigos" href="#/app/artigo/{{artigo.nid}}">
+      <div class="item">
+        <h2><a href="#/app/artigo/{{artigo.nid}}" ng-bind-html="artigo.title"></a></h2>
+        <p><a href="#/app/artigo/{{artigo.nid}}">{{artigo.field_competicao}}</a></p>
+      </div>
+      <div class="item item-image"><a href="#/app/artigo/{{artigo.nid}}"><img src="{{artigo.uri}}"></a></div>
     </div>
   </ion-content>
 </ion-view>
